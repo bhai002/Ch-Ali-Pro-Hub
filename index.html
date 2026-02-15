@@ -540,18 +540,63 @@
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <span class="app-title">Ali Muawia</span>
-                </div>
-                <button class="menu-btn" onclick="alert('Menu coming soon!')">
-                    <i class="fas fa-ellipsis-v"></i>
-                </button>
-            </div>
+               </div>
+
+<div class="menu-container" style="position: relative; display: inline-block;">
+    
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-ellipsis-v"></i>
+    </button>
+
+    <div id="dropdownMenu" 
+         style="display: none; position: absolute; right: 0; 
+         background: #111; padding: 10px; border-radius: 8px; 
+         box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/923196919750" target="_blank" 
+           style="display:block; padding:8px; color:white; text-decoration:none;">
+           WhatsApp
+        </a>
+
+        <!-- Call -->
+        <a href="tel:+923196919750" 
+           style="display:block; padding:8px; color:white; text-decoration:none;">
+           Call
+        </a>
+
+        <!-- Gmail -->
+        <a href="mailto:alimuawia108@gmail.com" 
+           style="display:block; padding:8px; color:white; text-decoration:none;">
+           Gmail
+        </a>
+
+        <!-- CV Download -->
+        <a href="cv.pdf" target="_blank" 
+           style="display:block; padding:8px; color:white; text-decoration:none;">
+           Download CV
+        </a>
+
+    </div>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("dropdownMenu");
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
         </header>
 
         <!-- Hero Section -->
         <section class="hero-section fade-in">
             <div class="hero-bg"></div>
             <div class="profile-container">
-                <img src="https://i.ibb.co/8g7W5V9/profile.jpg" alt="Ali Muawia" class="profile-img" onerror="this.src='https://via.placeholder.com/140'">
+                <img src="image.jpeg" alt="Ali Muawia" class="profile-img" onerror="this.src='https://via.placeholder.com/140'">
                 <div class="online-badge"></div>
             </div>
             <h1 class="hero-name">Ch Ali</h1>
@@ -589,6 +634,11 @@
                 <span class="action-label">CV</span>
             </a>
         </div>
+        <script>
+function downloadCV() {
+    window.open("cv.pdf", "_blank");
+}
+</script>
 
         <!-- Experience Section -->
         <section class="section fade-in">
